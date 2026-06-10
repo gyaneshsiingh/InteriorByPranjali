@@ -1,0 +1,285 @@
+.vh-header {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    backdrop-filter: blur(12px);
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.vh-header-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.vh-logo {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    cursor: pointer;
+}
+
+.vh-logo-image {
+    height: 72px;
+    width: auto;
+    margin: 8px 0px 0px 42px;
+}
+
+.vh-logo-image:hover {
+    opacity: 0.85;
+}
+
+.vh-nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.vh-nav-link {
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.vh-nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    border-radius: 999px;
+    background: #cdc695;
+    transition: width 200ms ease-out;
+}
+
+.vh-nav-auth {
+    /* display: flex; */
+    align-items: center;
+    gap: 1.5rem;
+    /* margin-left: auto; */
+}
+
+.vh-logo-mobile-wrap {
+    display: none;
+}
+
+.vh-menu-btn {
+    display: none;
+}
+
+.vh-mobile-menu {
+    display: none;
+}
+
+.vh-logo-desktop {
+    display: flex;
+}
+
+.vh-nav-desktop {
+    display: flex;
+    margin-right: 16px;
+}
+
+
+@media (max-width: 720px) {
+    .vh-logo-desktop {
+        display: none !important;
+    }
+
+    .vh-nav-desktop {
+        display: none !important;
+    }
+
+    .vh-logo-mobile-wrap {
+        display: flex;
+        flex: 1;
+    }
+
+    .vh-logo-image-mobile {
+        height: 44px;
+        width: auto;
+        object-fit: contain;
+        margin-left: 16px;
+    }
+
+    .vh-header {
+        position: fixed;
+        width: 100%;
+        backdrop-filter: none;
+        background: white;
+    }
+
+    body {
+        padding-top: 55px;
+    }
+
+
+
+    .vh-header-inner {
+        position: relative;
+        padding-inline: 32px;
+        z-index: 200;
+
+    }
+
+    .vh-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid rgba(209, 213, 219, 0.8);
+        background: #fff;
+        cursor: pointer;
+        margin-right: 8px;
+        flex-shrink: 0;
+    }
+
+    .vh-menu-icon {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: #0f172a;
+        position: relative;
+        transition: background 200ms;
+    }
+
+    .vh-menu-icon::before,
+    .vh-menu-icon::after {
+        content: '';
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: #0f172a;
+        position: absolute;
+        transition: transform 200ms;
+    }
+
+    .vh-menu-icon::before {
+        top: -5px;
+    }
+
+    .vh-menu-icon::after {
+        top: 5px;
+    }
+
+    .vh-menu-icon-open {
+        background: transparent;
+    }
+
+    .vh-menu-icon-open::before {
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    .vh-menu-icon-open::after {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
+    .vh-mobile-menu {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        background: rgba(15, 23, 42, 0.4);
+        backdrop-filter: blur(4px);
+    }
+
+    .vh-mobile-menu-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        /* border-radius: 0 0 1.5rem 1.5rem; */
+        padding: 80px 40px 24px 40px;
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        gap: 24px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .vh-mobile-menu-logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        color: #0f172a;
+
+    }
+
+    .vh-mobile-menu-logo-img {
+        height: 40px;
+        width: auto;
+    }
+
+    .vh-mobile-menu-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+    }
+
+    .vh-mobile-menu-link {
+        display: block;
+        padding: 14px 16px;
+        border-radius: 0.8rem;
+        background: #f9fafb;
+        text-decoration: none;
+        color: #0f172a;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .vh-mobile-menu-auth {
+        padding-top: 8px;
+        border-top: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .vh-mobile-menu-user {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .vh-hero-inner {
+        padding: 12px;
+        border-radius: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .span-and {
+        margin-left: 20px;
+        font-size: 4.5rem;
+    }
+
+    .vh-actions {
+        gap: 0.6rem;
+    }
+
+    .vh-btn {
+        flex: 1 1 100%;
+        justify-content: center;
+        color: black;
+    }
+
+
+    .vh-card-stats {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
