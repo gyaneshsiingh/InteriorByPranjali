@@ -191,7 +191,7 @@
 
 @media (max-width:600px) {
     .vh-profile-badge {
-        bottom: -12px;
+        bottom: -56px;
         right: -12px;
         min-width: auto;
         padding: 16px 24px;
