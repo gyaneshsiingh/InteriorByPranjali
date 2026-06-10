@@ -5,6 +5,7 @@ import Hero from "./components/Hero/hero";
 import Design from "./components/Design/design";
 import Stats from "./components/Stats/stats";
 import ContactCTA from "./components/Contact/contact";
+import Profile from "./components/Profile/profile";
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
             <Hero />
             <Stats />
             <Design />
+            <Profile />
             <ContactCTA />
             <Footer />
 

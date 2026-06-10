@@ -29,7 +29,12 @@ const Header = () => {
         const element = document.querySelector(href);
 
         if (element) {
-            element.scrollIntoView({
+            const headerOffset = 100;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
                 behavior: 'smooth'
             });
         }

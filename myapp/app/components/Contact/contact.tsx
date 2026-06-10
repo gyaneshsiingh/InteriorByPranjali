@@ -5,9 +5,26 @@ import { CONTACT_INFO } from "./contact.constant";
 import "./contact.modules.css"
 
 const ContactCTA = () => {
+    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+        e.preventDefault();
+
+        const element = document.querySelector(href);
+
+        if (element) {
+            const headerOffset = 100;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    };
+
 
     return (
-        <section className="vh-cta-section" id="schedule-consultation">
+        <section className="vh-cta-section" id="contact">
             <div className="vh-cta-container">
                 <div className="vh-cta-header">
                     <h2 className="vh-cta-title">
@@ -45,7 +62,7 @@ const ContactCTA = () => {
                 </div>
                 <div className="vh-cta-action">
                     <a
-                        href="https://wa.me/919455664970?text=Hi%2C%20I'd%20like%20a%20consultation"
+                        href="https://wa.me/919721409632?text=Hi%2C%20I'd%20like%20a%20consultation"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="vh-cta-btn"

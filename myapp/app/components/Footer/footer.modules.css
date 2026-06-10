@@ -1,7 +1,7 @@
 .vh-footer {
-    background: #ffffff;
+    background: #f9fafb;
     padding: 4rem 0 0;
-    color: white;
+    color: black;
 }
 
 .vh-footer-inner {
@@ -51,7 +51,7 @@
 .vh-footer-col-heading {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #ffffff;
+    color: black;
     margin: 0 0 1.25rem 0;
 }
 

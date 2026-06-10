@@ -5,8 +5,25 @@ import { DesignItemType } from "./design.type";
 import './design.modules.css'
 
 const Design = () => {
+    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+        e.preventDefault();
+
+
+        const element = document.querySelector(href);
+
+        if (element) {
+            const headerOffset = 100;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    };
     return (
-        <section className="vh-approach-section">
+        <section className="vh-approach-section" id="service">
             <div className="vh-approach-inner">
                 <h1 className="vh-approach-title">
                     Our Design Approach

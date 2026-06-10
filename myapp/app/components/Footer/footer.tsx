@@ -8,21 +8,9 @@ import './footer.modules.css'
 const Footer = () => {
     const year = new Date().getFullYear();
 
-    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
-        e.preventDefault();
-
-
-        const element = document.querySelector(href);
-
-        if (element) {
-            element.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    };
 
     return (
-        <footer className="vh-footer" id="contact">
+        <footer className="vh-footer">
             <div className="vh-footer-inner">
                 <div className="vh-footer-grid">
                     {/* NAP – critical for local SEO */}
@@ -37,7 +25,7 @@ const Footer = () => {
                         <ul className="vh-footer-nav-list">
                             {FOOTER_SERVICES_LINKS.map((link: FooterLinkType) => (
                                 <li key={link.href}>
-                                    <a href={link.href} onClick={(e) => handleScroll(e, link.href)}>
+                                    <a href={link.href}>
                                         {link.label}
                                     </a>
                                 </li>
@@ -49,7 +37,7 @@ const Footer = () => {
                         <ul className="vh-footer-nav-list">
                             {FOOTER_COMPANY_LINKS.map((link: FooterLinkType) => (
                                 <li key={link.href}>
-                                    <a href={link.href} onClick={(e) => handleScroll(e, link.href)}>
+                                    <a href={link.href}>
                                         {link.label}
                                     </a>
                                 </li>
@@ -62,7 +50,7 @@ const Footer = () => {
                         <ul className="vh-footer-nav-list">
                             {FOOTER_LEGAL_LINKS.map((link: FooterLinkType) => (
                                 <li key={link.href}>
-                                    <a href={link.href} onClick={(e) => handleScroll(e, link.href)}>
+                                    <a href={link.href}>
                                         {link.label}
                                     </a>
                                 </li>

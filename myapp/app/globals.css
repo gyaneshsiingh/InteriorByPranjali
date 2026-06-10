@@ -1,6 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  /* etc... */
+  /* 2. This acts as a safety net to completely prevent any side-to-side bouncing on phones! */
+  overflow-x: hidden;
 }
