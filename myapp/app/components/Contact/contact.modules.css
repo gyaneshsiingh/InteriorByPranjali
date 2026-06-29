@@ -1,6 +1,6 @@
 .vh-cta-section {
-    background: #172033;
-    padding: 2.5rem 1.5rem;
+    background: #051c1c;
+    padding: 40px 24px;
     text-align: center;
 }
 
@@ -11,34 +11,34 @@
 
 
 .vh-cta-title {
-    font-size: 2.5rem;
+    font-size: 40px;
     font-weight: 600;
     color: white;
-    margin: 0 0 0.75rem 0;
+    margin: 0 0 0.12px 0;
     letter-spacing: -0.02rem;
 }
 
 
 .vh-cta-subtitle {
     color: rgba(255, 255, 255, 0.65);
-    font-size: 0.9rem;
+    font-size: 16px;
     max-width: 560px;
-    margin: 2rem auto;
+    margin: 32px auto;
     line-height: 1.2;
 }
 
 .vh-cta-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    gap: 24px;
+    margin-bottom: 48px;
 }
 
 .vh-cta-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 1.25rem;
-    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    padding: 32px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +64,7 @@
 
 .vh-cta-card-label {
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     margin: 0 0 0.4rem 0;
 }
@@ -81,11 +81,11 @@
 }
 
 .vh-cta-btn {
-    background: rgb(115, 137, 90);
+    background: #335154;
     color: white;
     font-weight: 400;
-    font-size: 1rem;
-    padding: 1rem 2.5rem;
+    font-size: 16px;
+    padding: 16px 28px;
     border-radius: 999px;
     text-decoration: none;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -93,11 +93,13 @@
 
 .vh-cta-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 28px rgba(51, 81, 84, 0.6);
 }
 
 @media (max-width: 640px) {
     .vh-cta-grid {
         grid-template-columns: 1fr
     }
+
+
 }

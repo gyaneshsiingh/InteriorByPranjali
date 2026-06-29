@@ -1,13 +1,13 @@
 export const CONTACT_INFO = [
     {
         label: "Phone",
-        value: "+91 9721409632",
+        value: "+91 8400000499",
         icon: "/phone-call.png",
-        href: "tel:+919721409632"
+        href: "tel:+918400000499"
     },
     {
         label: "Email",
-        value: "test1@gmail.com",
+        value: "interiorbypranjali@gmail.com",
         icon: "/mail.png",
         href: "mailto:test1@gmail.com"
     },

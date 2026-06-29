@@ -1,4 +1,5 @@
 export interface StatItemType {
-    number: string;
+    value: number;
+    suffix: string;
     label: string;
 }

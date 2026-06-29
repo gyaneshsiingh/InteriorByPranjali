@@ -1,0 +1,171 @@
+.vh-collection-section {
+    padding: 80px 24px;
+    background-color: #ffffff;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.vh-collection-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 60px;
+    gap: 16px;
+}
+
+.vh-collection-title {
+    font-size: 40px;
+    font-weight: 600;
+    color: #0f172a;
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: -0.03rem;
+    white-space: pre-line;
+
+}
+
+
+
+.vh-collection-desc {
+    font-size: 20px;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 650px;
+}
+
+.vh-collection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.vh-collection-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.vh-collection-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+}
+
+.vh-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.vh-collection-card:hover .vh-card-img {
+    transform: scale(1.05);
+}
+
+.vh-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: near-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0) 40%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 32px;
+}
+
+.vh-card-title {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.vh-card-icon {
+    background: #335154;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.vh-collection-card:hover .vh-card-icon {
+    transform: translate(4px, -4px);
+    background: #ffffff;
+    color: #335154;
+}
+
+.vh-portfolio-modal {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.vh-portfolio-header {
+    padding: 20px 40px;
+    background: #393a3c;
+    display: flex;
+    align-items: center;
+}
+
+.vh-portfolio-back-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+}
+
+.vh-portfolio-back-btn:hover {
+    transform: scale(1.05);
+}
+
+.vh-portfolio-iframe {
+    flex-grow: 1;
+    width: 100%;
+    border: none;
+    background: #ffffff;
+}
+
+
+
+@media (max-width:960px) {
+    .vh-collection-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .vh-portfolio-header {
+        padding: 16px 20px;
+    }
+
+    .vh-collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vh-collection-card {
+        height: 350px !important;
+        width: 100% !important;
+    }
+}

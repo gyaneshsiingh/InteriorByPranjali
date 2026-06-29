@@ -7,14 +7,14 @@
 .vh-footer-inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 24px;
 }
 
 .vh-footer-grid {
     display: grid;
     grid-template-columns: 1.8fr 1fr 1fr 1fr;
     gap: 3rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 8px;
     /* border-bottom: 1px solid rgba(255, 255, 255, 0.07); */
 
 }

@@ -17,7 +17,7 @@ const Footer = () => {
                     <div className="vh-footer-brand">
                         <span className="vh-footer-logo">Interior By Pranjali</span>
                         <p className="vh-footer-tagline">
-                            Transforming spaces and creating exceptional real estate experience  since 2020.
+                            Transforming spaces and creating exceptional real estate experience  since 2021.
                         </p>
                     </div>
                     <div className="vh-footer-col" >

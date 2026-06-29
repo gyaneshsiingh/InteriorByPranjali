@@ -6,6 +6,8 @@ import Design from "./components/Design/design";
 import Stats from "./components/Stats/stats";
 import ContactCTA from "./components/Contact/contact";
 import Profile from "./components/Profile/profile";
+import Included from "./components/Included/included";
+import Collection from "./components/Collection/collection";
 
 export default function Home() {
     return (
@@ -14,6 +16,8 @@ export default function Home() {
             <Hero />
             <Stats />
             <Design />
+            <Collection />
+            <Included />
             <Profile />
             <ContactCTA />
             <Footer />
