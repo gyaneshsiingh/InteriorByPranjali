@@ -1,8 +1,7 @@
 export const HERO_CONTENT = {
-    title: "Transform Your ",
-    titleBreak: "Vision",
-    titleHighlight: "Into Reality",
-    subtitle: "Expert real estate solutions, architectural design, interior design, and consulting services for residential and commercial projects."
+    title: "Transforming Ideas ",
+    titleHighlight: "Into Beautiful Spaces",
+    subtitle: "Transforming residential and commercial spaces with innovative interior design, premium finishes, and exceptional craftsmanship."
 };
 
 export const HERO_BUTTONS = [

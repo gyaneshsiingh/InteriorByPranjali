@@ -2,7 +2,7 @@ import { CollectionItemType } from "./collection.type";
 
 export const COLLECTION_CONTENT = {
     title: "Explore Our Proudly\nCollection",
-    description: "Poliform will showcase  its vision of contemporary architecture,interior design trends, and innovative design approaches",
+    description: "We bring contemporary interior design to life through innovative ideas, thoughtful planning, and elegant spaces that inspire modern living.",
 };
 
 export const COLLECTION_COLUMN_1: CollectionItemType[] = [

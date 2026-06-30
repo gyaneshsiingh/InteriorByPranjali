@@ -1,5 +1,5 @@
 'use client'
-
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { NAV_LINKS } from "./header.constant";
 import { NavLinkType } from "./header.type";
@@ -22,6 +22,12 @@ const Header = () => {
     }, [menuOpen]);
 
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+
+        if (window.location.pathname !== '/') {
+            window.location.href = '/' + href;
+            return;
+        }
+
         e.preventDefault();
 
         setMenuOpen(false);
@@ -47,13 +53,27 @@ const Header = () => {
                 <div className="vh-header-inner">
                     <div className="vh-logo vh-logo-desktop">
                         <a href="#home" onClick={(e) => handleScroll(e, '#home')}>
-                            <img src="/logo.png" alt="InteriorByPranajali" className="vh-logo-image" />
+                            <Image
+                                src="/logo.svg"
+                                alt="InteriorByPranajali"
+                                className="vh-logo-image"
+                                width={640}
+                                height={245}
+                                priority
+                            />
                         </a>
                     </div>
                     <div className="vh-logo-mobile-wrap">
                         <a href="#home" onClick={(e) =>
                             handleScroll(e, '#home')}>
-                            <img src="/logo.png" alt="InteriorByPranajali" className="vh-logo-image-mobile" />
+                            <Image
+                                src="/logo.svg"
+                                alt="InteriorByPranajali"
+                                className="vh-logo-image-mobile"
+                                width={180}
+                                height={75}
+                                priority
+                            />
                         </a>
                     </div>
 

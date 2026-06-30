@@ -198,6 +198,10 @@
         padding: 16px 24px;
     }
 
+    .vh-profile-description {
+        text-align: unset;
+    }
+
     .vh-badge-number {
         font-size: 40px;
     }

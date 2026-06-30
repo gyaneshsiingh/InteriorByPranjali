@@ -57,6 +57,10 @@
     transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
 }
 
+.vh-approach-image {
+    width: 100px;
+}
+
 @media (max-width: 648px) {
     .vh-approach-grid {
         grid-template-columns: 1fr

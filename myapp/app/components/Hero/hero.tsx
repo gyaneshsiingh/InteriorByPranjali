@@ -26,15 +26,21 @@ const Hero = () => {
         }
     };
 
-    setTimeout(() => {
-        setShouldPreloadPDF(true);
-    }, 500);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShouldPreloadPDF(true);
+        }, 500);
+
+        return () => clearTimeout(timer);
+    }, [])
+
 
     return (
 
         <section className="vh-hero" id="home">
             {shouldPreloadPDF && (
                 <iframe
+                    title="Portfolio PDF"
                     src="https://docs.google.com/gview?url=https://myapp-theta-ruby.vercel.app/portfolio.pdf&embedded=true"
                     style={{
                         position: "absolute",
@@ -49,8 +55,7 @@ const Hero = () => {
                 <div className="vh-hero-content">
                     <h1 className="vh-title">
                         {HERO_CONTENT.title}
-                        <br className="vh-mobile-break" />
-                        {HERO_CONTENT.titleBreak}<br />
+                        <br />
                         <span className="vh-title-highlight">{HERO_CONTENT.titleHighlight}</span>
                     </h1>
                     <p className="vh-subtitle">

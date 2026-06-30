@@ -1,6 +1,6 @@
 export const NAV_LINKS = [
     { href: '#home', label: 'Home' },
-    { href: '#service', label: 'Interior Design' },
     { href: '#portfolio', label: 'Portfolio' },
+    { href: '#about', label: 'About Us' },
     { href: '#contact', label: 'Contact' }
 ];

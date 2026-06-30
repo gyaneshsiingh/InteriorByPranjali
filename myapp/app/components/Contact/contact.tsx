@@ -28,10 +28,10 @@ const ContactCTA = () => {
             <div className="vh-cta-container">
                 <div className="vh-cta-header">
                     <h2 className="vh-cta-title">
-                        Ready To Start Your Project?
+                        Start Your Interior Design Journey
                     </h2>
                     <p className="vh-cta-subtitle">
-                        Get in touch with our expert team today and let's bring your vision to life.
+                        Get in touch today and let us transform your ideas into beautifully designed interiors tailored to your style and needs.
                     </p>
                 </div>
                 <div className="vh-cta-grid">
@@ -62,7 +62,7 @@ const ContactCTA = () => {
                 </div>
                 <div className="vh-cta-action">
                     <a
-                        href="https://wa.me/919721409632?text=Hi%2C%20I'd%20like%20a%20consultation"
+                        href="https://wa.me/919529504728?text=Hi%2C%20I'd%20like%20a%20consultation"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="vh-cta-btn"

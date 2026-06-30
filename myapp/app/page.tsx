@@ -8,20 +8,22 @@ import ContactCTA from "./components/Contact/contact";
 import Profile from "./components/Profile/profile";
 import Included from "./components/Included/included";
 import Collection from "./components/Collection/collection";
+import Widget from './components/widget/widget'
 
 export default function Home() {
     return (
-        <>
+        <main>
             <Header />
             <Hero />
             <Stats />
             <Design />
-            <Collection />
             <Included />
+            <Collection />
             <Profile />
             <ContactCTA />
             <Footer />
 
-        </>
+
+        </main>
     );
 }

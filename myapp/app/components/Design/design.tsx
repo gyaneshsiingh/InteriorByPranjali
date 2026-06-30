@@ -25,9 +25,9 @@ const Design = () => {
     return (
         <section className="vh-approach-section" id="service">
             <div className="vh-approach-inner">
-                <h1 className="vh-approach-title">
+                <h2 className="vh-approach-title">
                     Our Design Approach
-                </h1>
+                </h2>
                 <span className="vh-approach-label">A collaborative journey that transforms your vision into reality through refined design and precise execution.</span>
             </div>
 
@@ -38,8 +38,8 @@ const Design = () => {
                             <Image
                                 src={interior.icon}
                                 alt={interior.desc}
-                                width={30}
-                                height={30}
+                                width={50}
+                                height={50}
                             />
                         </div>
                         <div className="vh-approach-label">

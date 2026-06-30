@@ -5,14 +5,14 @@ import { PROFILE_DATA } from "./profile.constant";
 
 const Profile = () => {
     return (
-        <section className="vh-profile-section" id="portfolio">
+        <section className="vh-profile-section" id="about" >
             <div className="vh-profile-main">
                 <div className="vh-profile-header">
                     <h2 className="vh-profile-maintitle">
                         Behind The Work
                     </h2>
                     <p className="vh-profile-subtitle">
-                        A passionate architect and designer dedicated to creating thoughtful, functional spaces that inspire and stand the test of time.
+                        A passionate interior designer dedicated to creating elegant, functional spaces that reflect your personality and enhance everyday living.
                     </p>
                 </div>
 
@@ -31,9 +31,9 @@ const Profile = () => {
                     </div>
 
                     <div className="vh-profile-content">
-                        <h1 className="vh-profile-name">
+                        <h2 className="vh-profile-name">
                             {PROFILE_DATA.name}
-                        </h1>
+                        </h2>
                         <h3 className="vh-profile-title">
                             {PROFILE_DATA.title}
                         </h3>

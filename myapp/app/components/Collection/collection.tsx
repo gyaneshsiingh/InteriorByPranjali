@@ -12,6 +12,7 @@ const Card = ({ item, onOpen }: { item: CollectionItemType, onOpen: () => void }
             src={item.image}
             alt={item.title}
             fill
+            sizes="(max-width:960px) 100vw, 50vw"
             className='vh-card-img'
         />
         <div className='vh-card-overlay'>
@@ -28,7 +29,7 @@ const Card = ({ item, onOpen }: { item: CollectionItemType, onOpen: () => void }
 const Collection = () => {
     const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
     return (
-        <section className='vh-collection-section'>
+        <section className='vh-collection-section' id='portfolio'>
             <div className='vh-collection-header'>
                 <h2 className='vh-collection-title'>
                     {COLLECTION_CONTENT.title}
