@@ -40,7 +40,7 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    animation: gradientShine 5s linear infinite;
+    animation: gradientShine 6s linear infinite;
 }
 
 @keyframes gradientShine {

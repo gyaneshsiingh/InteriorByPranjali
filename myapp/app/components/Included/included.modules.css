@@ -108,11 +108,19 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    width: 100%;
     background: near-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0) 40%);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-end;
-    padding: 32px;
+    padding: 24px;
+}
+
+.vh-card-text {
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
 }
 
 .vh-card-icon {
@@ -125,59 +133,15 @@
     justify-content: center;
     color: #ffffff;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    flex-shrink: 0;
 }
 
-.vh-card-icon:hover {
+.vh-included-image-wrapper:hover .vh-card-icon {
     transform: translate(4px, -4px);
     background: #ffffff;
     color: #335154;
 }
 
-
-.vh-portfolio-modal {
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-    background: rgba(0, 0, 0, 0.95);
-    display: flex;
-    flex-direction: column;
-}
-
-
-.vh-portfolio-header {
-    padding: 20px 40px;
-    background: #393a3c;
-    display: flex;
-    align-items: center;
-}
-
-.vh-portfolio-back-btn {
-    background: white;
-    color: black;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: 400;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-
-}
-
-.vh-portfolio-back-btn:hover {
-    transform: scale(1.05);
-}
-
-.vh-portfolio-iframe {
-    flex-grow: 1;
-    width: 100%;
-    border: none;
-    background: #ffffff;
-}
 
 
 
@@ -191,28 +155,17 @@
         margin-top: 0;
     }
 
-    .vh-included-content {
-        display: contents;
+    .vh-included-description {
+        text-align: center;
     }
 
     .vh-included-title {
-        order: 1;
+
         font-size: 32px;
         text-align: center;
     }
 
-    .vh-included-description {
-        order: 2;
-        text-align: center;
-    }
 
-    .vh-included-visual {
-        order: 3;
-    }
-
-    .vh-included-list {
-        order: 4;
-    }
 
 
 
