@@ -30,52 +30,54 @@ const Collection = () => {
     const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
     return (
         <section className='vh-collection-section' id='portfolio'>
-            <div className='vh-collection-header'>
-                <h2 className='vh-collection-title'>
-                    {COLLECTION_CONTENT.title}
-                </h2>
-                <div className='vh-collection-header-right'>
-                    <p className='vh-collection-desc'>
-                        {COLLECTION_CONTENT.description}
-                    </p>
-                </div>
-            </div>
-
-            <div className='vh-collection-grid'>
-                <div className='vh-collection-col'>
-                    {COLLECTION_COLUMN_1.map((item) => (
-                        <Card
-                            key={item.id} item={item}
-                            onOpen={() => setIsPortfolioOpen(true)} />
-                    ))}
-                </div>
-
-                <div className='vh-collection-col'>
-                    {COLLECTION_COLUMN_2.map((item) => (
-                        <Card
-                            key={item.id} item={item}
-                            onOpen={() => setIsPortfolioOpen(true)} />
-                    ))}
-                </div>
-            </div>
-
-            {isPortfolioOpen &&
-                (
-                    <div className='vh-portfolio-modal'>
-                        <div className='vh-portfolio-header'>
-                            <button onClick={() => setIsPortfolioOpen(false)}
-                                className='vh-portfolio-back-btn'>
-                                ← Back to Website
-                            </button>
-                        </div>
-
-                        <iframe
-                            src="https://docs.google.com/gview?url=https://myapp-theta-ruby.vercel.app/portfolio.pdf&embedded=true"
-                            className='vh-portfolio-iframe'
-                            title='Portfolio'
-                        />
+            <div className='vh-collection-inner'>
+                <div className='vh-collection-header'>
+                    <h2 className='vh-collection-title'>
+                        {COLLECTION_CONTENT.title}
+                    </h2>
+                    <div className='vh-collection-header-right'>
+                        <p className='vh-collection-desc'>
+                            {COLLECTION_CONTENT.description}
+                        </p>
                     </div>
-                )}
+                </div>
+
+                <div className='vh-collection-grid'>
+                    <div className='vh-collection-col'>
+                        {COLLECTION_COLUMN_1.map((item) => (
+                            <Card
+                                key={item.id} item={item}
+                                onOpen={() => setIsPortfolioOpen(true)} />
+                        ))}
+                    </div>
+
+                    <div className='vh-collection-col'>
+                        {COLLECTION_COLUMN_2.map((item) => (
+                            <Card
+                                key={item.id} item={item}
+                                onOpen={() => setIsPortfolioOpen(true)} />
+                        ))}
+                    </div>
+                </div>
+
+                {isPortfolioOpen &&
+                    (
+                        <div className='vh-portfolio-modal'>
+                            <div className='vh-portfolio-header'>
+                                <button onClick={() => setIsPortfolioOpen(false)}
+                                    className='vh-portfolio-back-btn'>
+                                    ← Back to Website
+                                </button>
+                            </div>
+
+                            <iframe
+                                src="https://docs.google.com/gview?url=https://myapp-theta-ruby.vercel.app/portfolio.pdf&embedded=true"
+                                className='vh-portfolio-iframe'
+                                title='Portfolio'
+                            />
+                        </div>
+                    )}
+            </div>
         </section>
     );
 };

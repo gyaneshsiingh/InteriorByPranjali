@@ -12,5 +12,5 @@ export const PROFILE_DATA: ProfileDataType = {
         { label: "Design Consultation" }
     ],
     yearsExperience: 4,
-    imageSrc: "/img.png"
+    imageSrc: "/img.webp"
 };

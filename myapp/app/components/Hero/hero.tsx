@@ -26,19 +26,19 @@ const Hero = () => {
         }
     };
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setShouldPreloadPDF(true);
-        }, 500);
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         setShouldPreloadPDF(true);
+    //     }, 500);
 
-        return () => clearTimeout(timer);
-    }, [])
+    //     return () => clearTimeout(timer);
+    // }, [])
 
 
     return (
 
         <section className="vh-hero" id="home">
-            {shouldPreloadPDF && (
+            {/* {shouldPreloadPDF && (
                 <iframe
                     title="Portfolio PDF"
                     src="https://docs.google.com/gview?url=https://myapp-theta-ruby.vercel.app/portfolio.pdf&embedded=true"
@@ -50,7 +50,7 @@ const Hero = () => {
                         pointerEvents: "none",
                     }}
                 />
-            )}
+            )} */}
             <div className="vh-hero-inner">
                 <div className="vh-hero-content">
                     <h1 className="vh-title">
@@ -67,7 +67,7 @@ const Hero = () => {
                     <div className="vh-card-main">
                         <div className="vh-card-image-wrapper">
                             <Image
-                                src="/center.png"
+                                src="/cen.webp"
                                 alt="interior design"
                                 className="vh-card-img-fit"
                                 width={520}
@@ -84,9 +84,25 @@ const Hero = () => {
                         <a key={btn.label}
                             href={btn.href}
                             onClick={(e) => handleScroll(e, btn.href)}
-                            className={`vh-btn vh-btn-${btn.style}`}
+                            className="vh-primary-btn"
                         >
                             {btn.label}
+                            <span className="vh-btn-icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </span>
+
                         </a>
                     ))}
                 </div>

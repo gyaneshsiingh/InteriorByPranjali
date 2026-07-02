@@ -1,42 +1,46 @@
-.vh-approach-label h3 {
+.vh-approach-label {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     color: #0b1121;
-    margin: 0 0 16px 0;
 }
 
-.vh-approach-label p {
+.vh-approach-label-desc {
     font-size: 16px;
-    color: #4b5563;
-    line-height: 1.6;
-    margin: 0;
+    font-weight: 400;
+    color: #0b1121;
+}
+
+.vh-approach-label-title {
+    font-size: 20px;
 }
 
 .vh-approach-section {
     background: #f9fafb;
-    padding: 40px 24px;
     text-align: center;
 }
 
 .vh-approach-inner {
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 1320px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 40px 28px;
 }
 
 .vh-approach-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    margin-top: 16px;
+    margin: 0 auto;
 }
 
 .vh-approach-title {
     font-size: 40px;
     font-weight: 600;
     color: black;
-    margin: 0 0 12px 0;
+
     letter-spacing: -0.02rem;
     line-height: 1.2;
+    text-align: center;
 
 }
 
@@ -64,5 +68,9 @@
 @media (max-width: 648px) {
     .vh-approach-grid {
         grid-template-columns: 1fr
+    }
+
+    .vh-approach-title {
+        font-size: 32px;
     }
 }

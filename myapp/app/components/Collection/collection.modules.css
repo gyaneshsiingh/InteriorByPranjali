@@ -1,9 +1,15 @@
 .vh-collection-section {
-    padding: 80px 24px;
+
     background-color: #f9fafb;
-    max-width: 1320px;
-    margin: 0 auto;
 }
+
+.vh-collection-inner {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 28px;
+}
+
 
 .vh-collection-header {
     display: flex;
@@ -26,11 +32,10 @@
 
 }
 
-
-
 .vh-collection-desc {
     font-size: 20px;
-    color: #475569;
+    font-weight: 400;
+    color: #0b1121;
     line-height: 1.6;
     margin: 0;
     max-width: 650px;
@@ -152,12 +157,17 @@
 @media (max-width:960px) {
     .vh-collection-header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 32px;
     }
 
     .vh-portfolio-header {
         padding: 16px 20px;
+    }
+
+    .vh-collection-title {
+        font-size: 32px;
+        text-align: center;
     }
 
     .vh-collection-grid {

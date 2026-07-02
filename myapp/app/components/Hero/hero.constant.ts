@@ -5,6 +5,6 @@ export const HERO_CONTENT = {
 };
 
 export const HERO_BUTTONS = [
-    { href: "#contact", label: "Get Started", style: "primary" },
-    { href: "#portfolio", label: "View Portfolio", style: "secondary" }
+    { href: "#contact", label: "Get Started Now", style: "primary" },
+
 ];

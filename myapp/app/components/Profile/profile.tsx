@@ -1,9 +1,31 @@
-import React from "react";
+'use client'
+import React, { useEffect, useRef, useState } from "react";
 import "./profile.modules.css"
 import Image from "next/image";
 import { PROFILE_DATA } from "./profile.constant";
+import { AnimatedStat } from "../Stats/stats";
+
 
 const Profile = () => {
+    const gridRef = useRef<HTMLDivElement>(null);
+
+    const [isRevealed, setIsRevealed] = useState(false);
+
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                setIsRevealed(true);
+            }
+        }, { threshold: 0.1 });
+
+        if (gridRef.current) {
+            observer.observe(gridRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <section className="vh-profile-section" id="about" >
             <div className="vh-profile-main">
@@ -16,7 +38,7 @@ const Profile = () => {
                     </p>
                 </div>
 
-                <div className="vh-profile-grid">
+                <div ref={gridRef} className={`vh-profile-grid ${isRevealed ? 'vh-revealed' : ''}`}>
                     <div className="vh-profile-image-container">
                         <div className="vh-profile-image-wrapper">
                             <Image src={PROFILE_DATA.imageSrc} alt={PROFILE_DATA.name} width={500} height={600} className="vh-profile-img" />
@@ -24,7 +46,7 @@ const Profile = () => {
 
                         <div className="vh-profile-badge">
                             <span className="vh-badge-number">
-                                {PROFILE_DATA.yearsExperience}+
+                                <AnimatedStat end={PROFILE_DATA.yearsExperience} suffix="+" />
                             </span>
                             <span className="vh-badge-text">Years Of Experience</span>
                         </div>

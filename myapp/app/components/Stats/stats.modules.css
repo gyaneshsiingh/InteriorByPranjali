@@ -1,12 +1,15 @@
 .vh-stats {
     background: #ffffff;
-    padding: 2rem 1.5rem;
+    /* padding: 2rem 1.5rem; */
+
     border-top: 1px solid #f1f5f9;
     border-bottom: 1px solid #f1f5f9;
 }
 
 .vh-stats-inner {
+    padding: 40px 28px;
     max-width: 1320px;
+    width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

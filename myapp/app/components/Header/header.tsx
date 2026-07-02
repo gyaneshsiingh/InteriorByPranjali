@@ -57,8 +57,8 @@ const Header = () => {
                                 src="/logo.svg"
                                 alt="InteriorByPranajali"
                                 className="vh-logo-image"
-                                width={640}
-                                height={245}
+                                width={540}
+                                height={180}
                                 priority
                             />
                         </a>

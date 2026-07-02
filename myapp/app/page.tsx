@@ -9,11 +9,13 @@ import Profile from "./components/Profile/profile";
 import Included from "./components/Included/included";
 import Collection from "./components/Collection/collection";
 import Widget from './components/widget/widget'
+import StickyNav from "./components/StickyNav/stickyNav";
 
 export default function Home() {
     return (
         <main>
             <Header />
+            <StickyNav />
             <Hero />
             <Stats />
             <Design />
@@ -22,6 +24,7 @@ export default function Home() {
             <Profile />
             <ContactCTA />
             <Footer />
+            <Widget />
 
 
         </main>

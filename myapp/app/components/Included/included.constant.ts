@@ -4,7 +4,7 @@ export const INCLUDED_CONTENT =
 {
     title: "What's Included",
     description: "Our comprehensive interior design service covers every aspect of your project, ensuring a seamless experience from concept to completion.",
-    imageSrc: "/inc1.png"
+    imageSrc: "/inc1.webp"
 };
 
 
