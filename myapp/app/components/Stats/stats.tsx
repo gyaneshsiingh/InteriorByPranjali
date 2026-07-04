@@ -20,12 +20,12 @@ export const AnimatedStat = ({ end, suffix }: { end: number, suffix: string }) =
 
             if (entry.isIntersecting && !hasAnimated.current) {
                 hasAnimated.current = true;
-                const duration = 1000;
+                const duration = 400;
 
                 const startTime = performance.now();
 
                 const easeOutQuart = (x: number): number => {
-                    return 1 - Math.pow(1 - x, 2);
+                    return 1 - Math.pow(1 - x, 4);
                 };
 
                 const updateCount = (currentTime: number) => {

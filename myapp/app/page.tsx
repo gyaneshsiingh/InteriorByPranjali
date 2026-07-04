@@ -15,7 +15,7 @@ export default function Home() {
     return (
         <main>
             <Header />
-            <StickyNav />
+
             <Hero />
             <Stats />
             <Design />

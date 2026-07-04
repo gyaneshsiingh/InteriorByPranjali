@@ -4,6 +4,7 @@ import React from "react";
 import { FOOTER_COMPANY_LINKS, FOOTER_LEGAL_LINKS, FOOTER_SERVICES_LINKS } from "./footer.constant";
 import { FooterLinkType } from "./footer.type";
 import './footer.modules.css'
+import Image from "next/image";
 
 const Footer = () => {
     const year = new Date().getFullYear();
@@ -15,7 +16,14 @@ const Footer = () => {
                 <div className="vh-footer-grid">
                     {/* NAP – critical for local SEO */}
                     <div className="vh-footer-brand">
-                        <span className="vh-footer-logo">Interior By Pranjali</span>
+                        {/* <span className="vh-footer-logo">Interior By Pranjali</span> */}
+                        <Image
+                            src="/logo.svg"
+                            alt="InteriorByPranjali"
+                            width={150}
+                            height={80}
+                            className="vh-footer-logo-img"
+                        />
                         <p className="vh-footer-tagline">
                             Transforming spaces and creating exceptional real estate experience  since 2021.
                         </p>
