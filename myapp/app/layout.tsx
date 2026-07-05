@@ -4,9 +4,28 @@ import "./globals.css";
 // This tells Next.js to automatically download and optimize the Inter font!
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata = {
-    title: "Interior by Pranjali",
-    description: "Interior design portfolio",
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: {
+        template: '%s | Interior by Pranjali Pune',
+        default: 'Interior by Pranjali | Premium Interior Designers in Pune',
+    },
+    description: "Premium interior design services by Pranjali in Pune. Transforming spaces with modern, aesthetic, and functional design solutions.",
+    keywords: ['interior design Pune', 'home decor Pune', 'office interiors Pune', 'modern interiors Pune', 'interior design portfolio', 'residential design Pune', 'best interior designers in pune'],
+    openGraph: {
+        title: 'Interior by Pranjali | Premium Interior Designers in Pune',
+        description: 'Premium interior design services by Pranjali in Pune. Transforming spaces with modern, aesthetic, and functional design solutions.',
+        url: 'https://interiorbypranjali.com',
+        siteName: 'Interior by Pranjali Pune',
+        locale: 'en_US',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Interior by Pranjali | Premium Interior Designers in Pune',
+        description: 'Premium interior design services by Pranjali in Pune.',
+    },
 };
 
 export default function RootLayout({

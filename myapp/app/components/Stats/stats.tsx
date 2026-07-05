@@ -20,7 +20,7 @@ export const AnimatedStat = ({ end, suffix }: { end: number, suffix: string }) =
 
             if (entry.isIntersecting && !hasAnimated.current) {
                 hasAnimated.current = true;
-                const duration = 400;
+                const duration = 800;
 
                 const startTime = performance.now();
 

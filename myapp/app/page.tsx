@@ -15,7 +15,6 @@ export default function Home() {
     return (
         <main>
             <Header />
-
             <Hero />
             <Stats />
             <Design />
