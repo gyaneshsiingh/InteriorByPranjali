@@ -3,4 +3,5 @@ export interface CollectionItemType {
     title: string;
     image: string;
     height: string;
+    pdfUrl: string;
 }

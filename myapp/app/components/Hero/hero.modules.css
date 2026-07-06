@@ -33,14 +33,14 @@
     background: linear-gradient(to right,
             #0f172a 0%,
             #335154 33%,
-            #426569 66%,
+            #5c8689 66%,
             #0f172a 100%);
     background-size: 300% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    animation: gradientShine 6s linear infinite;
+    animation: gradientShine 4s linear infinite;
 }
 
 @keyframes gradientShine {
@@ -90,21 +90,21 @@
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
-    padding: 16px 32px;
+    padding: 16px 40px;
     border-radius: 50px;
     text-decoration: none;
-    transition: background-color 1.5s ease;
+    transition: background-color 0.3s ease;
     cursor: pointer;
     border: none;
-
 }
 
 .vh-primary-btn:hover {
     background-color: #426569;
-    gap: 64px;
-    padding-right: 32px;
+
+
 }
 
+/* 
 .vh-btn-icon {
     display: flex;
     align-items: center;
@@ -114,7 +114,7 @@
     background-color: #ffffff;
     color: #111111;
     border-radius: 50%;
-}
+} */
 
 
 .vh-meta {
@@ -144,6 +144,7 @@
 }
 
 .vh-card-image-wrapper {
+    position: relative;
     height: 400px;
     width: 100%;
     overflow: hidden;
@@ -195,5 +196,14 @@
 
     .vh-mobile-break {
         display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .vh-primary-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        box-sizing: border-box;
     }
 }

@@ -9,6 +9,29 @@ import Image from "next/image";
 const Footer = () => {
     const year = new Date().getFullYear();
 
+    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+        if (href.startsWith('#')) {
+            if (window.location.pathname !== '/') {
+                window.location.href = '/' + href;
+                return;
+            }
+
+            e.preventDefault();
+
+            const element = document.querySelector(href);
+
+            if (element) {
+                const headerOffset = 100;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    };
 
     return (
         <footer className="vh-footer">
@@ -33,7 +56,7 @@ const Footer = () => {
                         <ul className="vh-footer-nav-list">
                             {FOOTER_SERVICES_LINKS.map((link: FooterLinkType) => (
                                 <li key={link.href}>
-                                    <a href={link.href}>
+                                    <a href={link.href} onClick={(e) => handleScroll(e, link.href)}>
                                         {link.label}
                                     </a>
                                 </li>
@@ -45,7 +68,7 @@ const Footer = () => {
                         <ul className="vh-footer-nav-list">
                             {FOOTER_COMPANY_LINKS.map((link: FooterLinkType) => (
                                 <li key={link.href}>
-                                    <a href={link.href}>
+                                    <a href={link.href} onClick={(e) => handleScroll(e, link.href)}>
                                         {link.label}
                                     </a>
                                 </li>
@@ -58,7 +81,7 @@ const Footer = () => {
                         <ul className="vh-footer-nav-list">
                             {FOOTER_LEGAL_LINKS.map((link: FooterLinkType) => (
                                 <li key={link.href}>
-                                    <a href={link.href}>
+                                    <a href={link.href} onClick={(e) => handleScroll(e, link.href)}>
                                         {link.label}
                                     </a>
                                 </li>

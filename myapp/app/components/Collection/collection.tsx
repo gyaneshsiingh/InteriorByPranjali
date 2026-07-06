@@ -7,7 +7,7 @@ import react from 'react'
 
 
 const Card = ({ item }: { item: CollectionItemType }) => (
-    <a href="/portfolio.pdf" target="_blank" rel="noopener noreferrer" className='vh-collection-card' style={{ height: item.height, display: 'block' }}>
+    <a href={item.pdfUrl} target="_blank" rel="noopener noreferrer" className='vh-collection-card' style={{ height: item.height, display: 'block' }}>
         <Image
             src={item.image}
             alt={item.title}

@@ -1,13 +1,12 @@
 'use client'
 import React, { useEffect, useState } from "react";
-import { HERO_BUTTONS, HERO_CONTENT } from "./hero.constant";
+import { HERO_CONTENT } from "./hero.constant";
 import './hero.modules.css';
 import Image from "next/image";
 import { HeroButtonType } from "./hero.type";
 
 
 const Hero = () => {
-    const [shouldPreloadPDF, setShouldPreloadPDF] = useState(false);
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
         e.preventDefault();
 
@@ -26,31 +25,10 @@ const Hero = () => {
         }
     };
 
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         setShouldPreloadPDF(true);
-    //     }, 500);
-
-    //     return () => clearTimeout(timer);
-    // }, [])
-
-
     return (
 
         <section className="vh-hero" id="home">
-            {/* {shouldPreloadPDF && (
-                <iframe
-                    title="Portfolio PDF"
-                    src="https://docs.google.com/gview?url=https://myapp-theta-ruby.vercel.app/portfolio.pdf&embedded=true"
-                    style={{
-                        position: "absolute",
-                        width: 1,
-                        height: 1,
-                        opacity: 0,
-                        pointerEvents: "none",
-                    }}
-                />
-            )} */}
+
             <div className="vh-hero-inner">
                 <div className="vh-hero-content">
                     <h1 className="vh-title">
@@ -70,8 +48,8 @@ const Hero = () => {
                                 src="/cen.webp"
                                 alt="interior design"
                                 className="vh-card-img-fit"
-                                width={520}
-                                height={400}
+                                fill
+                                sizes="(max-width:960px) 100vw,50vw"
                                 priority
                                 quality={75}
                             />
@@ -80,31 +58,15 @@ const Hero = () => {
                 </div>
 
                 <div className="vh-actions">
-                    {HERO_BUTTONS.map((btn: HeroButtonType) => (
-                        <a key={btn.label}
-                            href={btn.href}
-                            onClick={(e) => handleScroll(e, btn.href)}
-                            className="vh-primary-btn"
-                        >
-                            {btn.label}
-                            <span className="vh-btn-icon">
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    width="20"
-                                    height="20"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </span>
+                    <a
+                        href="https://wa.me/919529504728?text=Hi%2C%20I'd%20like%20a%20consultation"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="vh-primary-btn"
+                    >
+                        Get In Touch
 
-                        </a>
-                    ))}
+                    </a>
                 </div>
             </div>
 

@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+    colorScheme: 'only light',
     title: {
         template: '%s | Interior by Pranjali Pune',
         default: 'Interior by Pranjali | Premium Interior Designers in Pune',

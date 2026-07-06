@@ -1,7 +1,7 @@
 import { isExternal } from "util/types";
 
 export const FOOTER_SERVICES_LINKS = [
-    { href: "#service", label: "Interior Design", isExternal: false },
+    { href: "#services", label: "Interior Design", isExternal: false },
 ];
 
 export const FOOTER_COMPANY_LINKS = [
