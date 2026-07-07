@@ -5,26 +5,32 @@ import { COLLECTION_COLUMN_1, COLLECTION_COLUMN_2, COLLECTION_CONTENT } from './
 import "./collection.modules.css"
 import react from 'react'
 
+const Card = ({ item }: { item: CollectionItemType }) => {
+    const handlePreview = (e: React.MouseEvent) => {
+        e.preventDefault();
+        window.open(item.pdfUrl, '_blank', 'noopener,noreferrer');
+    };
 
-const Card = ({ item }: { item: CollectionItemType }) => (
-    <a href={item.pdfUrl} target="_blank" rel="noopener noreferrer" className='vh-collection-card' style={{ height: item.height, display: 'block' }}>
-        <Image
-            src={item.image}
-            alt={item.title}
-            fill
-            sizes="(max-width:960px) 100vw, 50vw"
-            className='vh-card-img'
-        />
-        <div className='vh-card-overlay'>
-            <h3 className='vh-card-title'>{item.title}</h3>
-            <div className='vh-card-icon'>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                </svg>
+    return (
+        <a href={item.pdfUrl} onClick={handlePreview} className='vh-collection-card' style={{ height: item.height, display: 'block' }}>
+            <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="(max-width:960px) 100vw, 50vw"
+                className='vh-card-img'
+            />
+            <div className='vh-card-overlay'>
+                <h3 className='vh-card-title'>{item.title}</h3>
+                <div className='vh-card-icon'>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </div>
             </div>
-        </div>
-    </a>
-);
+        </a>
+    );
+};
 
 const Collection = () => {
     return (

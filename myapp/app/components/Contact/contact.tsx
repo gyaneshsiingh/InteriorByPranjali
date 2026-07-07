@@ -62,7 +62,7 @@ const ContactCTA = () => {
                 </div>
                 <div className="vh-cta-action">
                     <a
-                        href="https://wa.me/919529504728?text=Hi%2C%20I'd%20like%20a%20consultation"
+                        href="https://wa.me/919529504728?text=Hi%20Pranjali%2C%20I%20would%20like%20a%20consultation"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="vh-cta-btn"

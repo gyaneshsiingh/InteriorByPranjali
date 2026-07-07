@@ -35,7 +35,15 @@ const Included = () => {
 
 
                 <div className="vh-included-visual">
-                    <a href="/demo.pdf" target="_blank" rel="noopener noreferrer" className="vh-included-image-wrapper" style={{ display: 'block' }}>
+                    <a 
+                        href="/demo.pdf" 
+                        onClick={(e) => {
+                            e.preventDefault();
+                            window.open('/demo.pdf', '_blank', 'noopener,noreferrer');
+                        }}
+                        className="vh-included-image-wrapper" 
+                        style={{ display: 'block' }}
+                    >
                         <Image
                             src={INCLUDED_CONTENT.imageSrc}
                             alt="Interior Design Services"

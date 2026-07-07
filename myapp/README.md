@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Interior By Pranjali 🏡✨
 
-## Getting Started
+> Premium Interior Design Services in Pune, Maharashtra.
 
-First, run the development server:
+A modern, high-performance portfolio and business website for **Interior By Pranjali**, built to showcase premium interior design projects, services, and facilitate client consultations.
 
+![Interior By Pranjali](https://www.interiorbypranjali.com/cen.webp)
+
+## 🌐 Live Website
+**[https://www.interiorbypranjali.com](https://www.interiorbypranjali.com)**
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: Vanilla CSS (Modular CSS for component-level scoping)
+- **Deployment**: [Vercel](https://vercel.com/)
+- **Icons/Fonts**: Google Fonts (Inter), custom SVGs
+
+---
+
+## 🚀 Getting Started
+
+Follow these instructions to run the project locally.
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) (v18 or higher) and `npm` installed on your machine.
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/interior-by-pranjali.git
+cd interior-by-pranjali
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Run the Development Server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the local environment. The page will automatically hot-reload as you make edits to the code.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project follows a component-driven architecture using the Next.js App Router:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+├── app/
+│   ├── components/         # Reusable UI components
+│   │   ├── Collection/     # Portfolio grid & PDF previews
+│   │   ├── Contact/        # Contact CTA and information
+│   │   ├── Design/         # Design philosophy & process
+│   │   ├── Footer/         # Global footer navigation
+│   │   ├── Header/         # Sticky top navigation
+│   │   ├── Hero/           # Main landing hero section
+│   │   ├── Profile/        # Designer profile & bio
+│   │   ├── Stats/          # Animated statistics section
+│   │   └── widget/         # Floating sticky contact widget (WhatsApp/Phone/Email)
+│   │
+│   ├── globals.css         # Global styles, variables, and typography
+│   ├── layout.tsx          # Root HTML layout and global SEO metadata
+│   ├── page.tsx            # Main homepage composition
+│   ├── robots.ts           # Search engine crawler instructions
+│   └── sitemap.ts          # Automated sitemap for SEO indexing
+│
+├── public/                 # Static assets (images, PDFs, SVGs)
+└── next.config.ts          # Next.js configuration
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📈 SEO & Performance
+- **Optimized Core Web Vitals**: LCP images are prioritized and preloaded.
+- **Dynamic Meta Tags**: Full OpenGraph and Twitter Card support for rich social media sharing.
+- **Mobile First**: Fully responsive layouts optimized for all viewport sizes.
+- **Static Export**: Lightning-fast page loads leveraging Vercel's edge caching.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📞 Contact Integration
+The website features seamless integration for client outreach:
+- **WhatsApp**: Pre-filled consultation messages ("Hi Pranjali, I would like a consultation")
+- **Direct Call/SMS**: `tel:` and `sms:` URI handlers for instant mobile dialing
+- **Email**: Pre-filled Gmail web client drafting
+
+---
+
+## 📝 License
+This project is proprietary and meant for the sole use of **Interior By Pranjali**. All rights reserved.

@@ -8,7 +8,7 @@ const StickWidget = () => {
         <div className="vh-sticky-container">
             <div className={`vh-sticky-menu ${isOpen ? 'vh-sticky-menu-open' : ''}`}>
 
-                <a href="https://wa.me/919529504728"
+                <a href="https://wa.me/919529504728?text=Hi%20Pranjali%2C%20I%20would%20like%20a%20consultation"
                     target="_blank" rel="noopener noreferrer"
                     className="vh-sticky-btn vh-whatsapp"
                     title="WhatsApp Us">
