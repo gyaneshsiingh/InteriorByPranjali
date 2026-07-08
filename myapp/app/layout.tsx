@@ -13,6 +13,11 @@ export const metadata: Metadata = {
         default: 'Interior by Pranjali | Premium Interior Designers in Pune',
     },
     description: "Premium interior design services by Pranjali in Pune. Transforming spaces with modern, aesthetic, and functional design solutions.",
+    icons: {
+        icon: '/icon.svg',
+        shortcut: '/icon.svg',
+        apple: '/icon.svg',
+    },
     keywords: ['interior design Pune', 'home decor Pune', 'office interiors Pune', 'modern interiors Pune', 'interior design portfolio', 'residential design Pune', 'best interior designers in pune'],
     openGraph: {
         title: 'Interior by Pranjali | Premium Interior Designers in Pune',

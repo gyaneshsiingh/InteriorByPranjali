@@ -47,7 +47,7 @@ const ContactCTA = () => {
                                 <div className="vh-cta-card-icon">
                                     <Image
                                         src={contact.icon}
-                                        alt={contact.label}
+                                        alt=""
                                         width={30}
                                         height={30}
                                     />
